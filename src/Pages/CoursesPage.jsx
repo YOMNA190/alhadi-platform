@@ -16,34 +16,17 @@ const CourseCard = ({ course }) => {
         {/* === الجزء الذي تم إصلاحه === */}
         <div className="flex justify-between items-center">
           <span className="text-xl font-extrabold text-blue-900">{course.price} ج.م</span>
-          <Link to={</courses/${course.id}} className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-all duration-300">
+          <Link 
+            to={`/courses/${course.id}`} 
+            className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors"
+          >
             التفاصيل
           </Link>
         </div>
         {/* === نهاية الجزء الذي تم إصلاحه === */}
-
       </div>
     </div>
   );
 };
 
-const CoursesPage = () => {
-  return (
-    <div className="bg-white min-h-screen">
-      <div className="container mx-auto px-6 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-gray-800">جميع الكورسات المتاحة</h1>
-          <p className="text-gray-600 mt-2">اختر الكورس الذي يناسبك وابدأ التعلم الآن.</p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {coursesData.map(course => (
-            <CourseCard key={course.id} course={course} />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default CoursesPage;
+export default CourseCard;

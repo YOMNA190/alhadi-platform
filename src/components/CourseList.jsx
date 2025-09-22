@@ -16,7 +16,7 @@ const CourseCard = ({ course }) => {
         {/* === الجزء الذي تم إصلاحه === */}
         <div className="flex justify-between items-center">
           <span className="text-xl font-extrabold text-blue-900">{course.price} ج.م</span>
-          <Link to={/courses/${course.id}} className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-all duration-300">
+          <Link to={`/courses/${course.id}`} className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-all duration-300">
             التفاصيل
           </Link>
         </div>
